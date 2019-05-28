@@ -17,6 +17,8 @@ Route::middleware('auth:api')->group(function () {
     Route::get('products', 'ProductsController@index')->name('products.index');
 
     Route::get('email/basic', 'MailController@basic')->name('email.basic');
+    Route::get('email/html', 'MailController@sendHTML')->name('email.html');
+    Route::get('email/template', 'MailController@sendTemplate')->name('email.html');
 });
 // Route::resource('ProductsController');
 // Route::get('welcome', function () {
