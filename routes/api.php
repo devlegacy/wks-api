@@ -13,10 +13,10 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:api')->group(function () {
+    Route::get('products', 'ProductsController@index')->name('products.index');
 });
-
-Route::get('welcome', function () {
-    return response()->json(['status' => 200, 'data' => 'Bienvenidos al Workshop de Laravel']);
-});
+// Route::resource('ProductsController');
+// Route::get('welcome', function () {
+//     return response()->json(['status' => 200, 'data' => 'Bienvenidos al Workshop de Laravel']);
+// });
