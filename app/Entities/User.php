@@ -1,14 +1,17 @@
 <?php
 
-namespace App;
+namespace App\Entities;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+use Illuminate\Database\Eloquent\Model;
+use Laratrust\Traits\LaratrustUserTrait;
+
+class User extends Model
 {
-    use Notifiable;
+    use LaratrustUserTrait; // add this trait to your user model
 
     /**
      * The attributes that are mass assignable.
