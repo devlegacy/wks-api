@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "fc43d852-0542-44bf-bf9c-d2d05736abfb",
+		"name": "Workshop API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "welcome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API}}welcome",
+							"host": [
+								"{{API}}welcome"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API}}user?api_token={{API_TOKEN}}",
+							"host": [
+								"{{API}}user"
+							],
+							"query": [
+								{
+									"key": "api_token",
+									"value": "{{API_TOKEN}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API}}products?api_token={{API_TOKEN}}",
+							"host": [
+								"{{API}}products"
+							],
+							"query": [
+								{
+									"key": "api_token",
+									"value": "{{API_TOKEN}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "email/basic",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API}}email/basic?api_token={{API_TOKEN}}",
+							"host": [
+								"{{API}}email"
+							],
+							"path": [
+								"basic"
+							],
+							"query": [
+								{
+									"key": "api_token",
+									"value": "{{API_TOKEN}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
