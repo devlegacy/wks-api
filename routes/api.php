@@ -15,6 +15,8 @@ use Illuminate\Http\Request;
 
 Route::middleware('auth:api')->group(function () {
     Route::get('products', 'ProductsController@index')->name('products.index');
+
+    Route::get('email/basic', 'MailController@basic')->name('email.basic');
 });
 // Route::resource('ProductsController');
 // Route::get('welcome', function () {
