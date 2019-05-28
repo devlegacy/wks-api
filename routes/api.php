@@ -17,3 +17,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('welcome', function () {
+    return response()->json(['status' => 200, 'data' => 'Bienvenidos al Workshop de Laravel']);
+});
