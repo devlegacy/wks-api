@@ -15,6 +15,10 @@ use Illuminate\Http\Request;
 
 Route::middleware('auth:api')->group(function () {
     Route::get('products', 'ProductsController@index')->name('products.index');
+    // Subir archivos laravel
+    Route::post('local-store','ProductsController@localStorage')->name('local.storage');
+    // Subir archivo amazon
+    Route::post('amazon-store','ProductsController@amazonStorage')->name('amazon.storage');
 
     Route::get('email/basic', 'MailController@basic')->name('email.basic');
     Route::get('email/html', 'MailController@sendHTML')->name('email.html');
