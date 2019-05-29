@@ -95,13 +95,14 @@ class ProductsController extends Controller
         //
     }
 
-    public function localStorage(Request $request) {
-        $validator = Validator::make($request->json()->all(),[
-            'name' => 'min:5',
+    public function localStorage(Request $request)
+    {
+        $validator = Validator::make($request->json()->all(), [
+            'name' => 'required|min:5',
             'filename' => 'max:500000', // Kilobytes
         ]);
 
-        if($validator->fails()) {
+        if ($validator->fails()) {
             return response()->json([
                     'data' => $validator->errors(),
                     'code' =>  Response::HTTP_UNPROCESSABLE_ENTITY
@@ -128,6 +129,5 @@ class ProductsController extends Controller
 
     public function amazonStorage(Request $request)
     {
-
     }
 }
