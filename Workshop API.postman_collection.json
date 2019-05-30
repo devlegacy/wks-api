@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "fc43d852-0542-44bf-bf9c-d2d05736abfb",
+		"_postman_id": "eabd1228-0dc8-44f7-bfea-a56cf175f7d2",
 		"name": "Workshop API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -74,6 +74,94 @@
 							],
 							"path": [
 								"basic"
+							],
+							"query": [
+								{
+									"key": "api_token",
+									"value": "{{API_TOKEN}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "email/html",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API}}email/html?api_token={{API_TOKEN}}",
+							"host": [
+								"{{API}}email"
+							],
+							"path": [
+								"html"
+							],
+							"query": [
+								{
+									"key": "api_token",
+									"value": "{{API_TOKEN}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "email/template",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API}}email/template?api_token={{API_TOKEN}}",
+							"host": [
+								"{{API}}email"
+							],
+							"path": [
+								"template"
+							],
+							"query": [
+								{
+									"key": "api_token",
+									"value": "{{API_TOKEN}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "local-store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "filename",
+									"type": "file",
+									"src": "/C:/Users/Public/Pictures/Sample Pictures/Koala.jpg"
+								},
+								{
+									"key": "name",
+									"value": "Product 1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API}}local-store?api_token={{API_TOKEN}}",
+							"host": [
+								"{{API}}local-store"
 							],
 							"query": [
 								{
